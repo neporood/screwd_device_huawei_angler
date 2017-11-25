@@ -53,8 +53,8 @@ PRODUCT_COPY_FILES += \
     device/huawei/angler/thermal-engine-angler.conf:system/etc/thermal-engine.conf
 
 # Vendor Interface Manifest
-PRODUCT_COPY_FILES += \
-    device/huawei/angler/manifest.xml:vendor/manifest.xml
+#PRODUCT_COPY_FILES += \
+#    device/huawei/angler/manifest.xml:vendor/manifest.xml
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -553,10 +553,10 @@ ifneq (,$(filter userdebug, $(TARGET_BUILD_VARIANT)))
 endif
 
 # configure the HWUI memory limits
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
+$(call inherit-product, vendor/extras/configs/phone-xxhdpi-3072-hwui-memory.mk)
 
 # setup dalvik vm configs.
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
+$(call inherit-product, vendor/extras/configs/phone-xxhdpi-3072-dalvik-heap.mk)
 
 # drmservice prop
 PRODUCT_PROPERTY_OVERRIDES += \
